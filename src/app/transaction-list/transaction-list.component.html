@@ -1,0 +1,46 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Transaction List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+              <th>Id</th>
+            <th>AccountNo</th>
+            
+            <th>Name</th>
+            <th>Email</th>
+            <th>Balance</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions | async" scope="row">
+           <td>{{ transaction.id }}</td>
+            <td>{{ transaction.accountNo }}</td>
+            <td>{{ transaction.name }}</td>
+            <td>{{ transaction.email }}</td>
+            <td>{{ transaction.balance }}</td>
+          
+         <td><!-- <button (click)="deleteTransaction(transaction.transactionId)" class="btn btn-danger">Delete</button>
+                
+             <button (click)="editTransaction(transaction.transactionId)" class="btn btn-secondary" style="margin-left: 10px">Update</button>
+            -->
+                <button (click)="TransactionDetails(transaction.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+
+    </div>
+    
+    <button routerLink="/login" class="btn btn-success">LogOut</button>
+    <br>
+  </div>
+  <br>
+  <br>

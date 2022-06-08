@@ -1,0 +1,38 @@
+<h2>Transaction Details</h2>
+<hr>
+<div *ngIf="transaction">
+    <div>
+        <label><b>Id :</b></label>{{transaction.id}}
+    </div>
+    <div>
+        <label><b>AccountNo :</b></label>{{transaction.accountNo}}
+    </div>
+    <div>
+        <label><b>Name :</b></label>{{transaction.name}}
+    </div>
+    <div>
+        <label><b>Email :</b></label>{{transaction.email}}
+    </div>
+    <div>
+        <label><b>Balance :</b></label>{{transaction.balance}}
+
+    </div>
+<br>
+
+<button routerLink="/login" class="btn btn-success">LogOut</button>
+<br>
+    <!--<button (click)="TransactionDetails(transaction.id)" class="btn btn-info" style="margin-left: 10px">Details</button>-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+</div>

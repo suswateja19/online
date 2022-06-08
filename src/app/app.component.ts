@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Online-Banking-System';
+  title='Piggy Bank';
+  imagePath='/assets/images/bank.jpeg';
+
+  constructor(public loginService:AuthenticationService){}
 }

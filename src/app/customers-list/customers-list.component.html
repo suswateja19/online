@@ -1,0 +1,42 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Customers List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-sm table-dark table-fit">
+            <thead>
+                <tr>
+                    <th scope="col">Customer Id</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Dob</th>
+                    <th scope="col">Phone No</th>
+                    <th scope="col">Account No</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customer of customers | async" scope="row">
+                    <td>{{ customer.id }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>{{ customer.fname }}</td>
+                    <td>{{ customer.lname }}</td>
+                    <td>{{customer.dob}}</td>
+                    <td>{{ customer.phoneNo }}</td>
+                    <td>{{ customer.accountNo }}</td>
+                    <td>{{ customer.street }}, {{customer.city}}-{{customer.pincode}}</td>
+                  <!--  <td> <button (click)="CustomerDetails(customer.email)" class="btn btn-info" style="margin-left: 10px">Details</button></td>-->
+                </tr>
+            </tbody>
+        </table><!--localhost:4200/customers-->
+    </div>
+   
+    <button routerLink="/transactions" class="btn btn-success">Transactions List</button>   
+    <br>
+    <br>
+
+    <button routerLink="/login" class="btn btn-success">LogOut</button>
+    <br>
+</div>
+<br>
